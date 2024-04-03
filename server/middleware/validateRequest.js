@@ -25,14 +25,7 @@ export default function validateRequest(schemaBody = {}, schemaQuery = {}){
                         error: `Missing '${key}' in query parameters`
                     });
                     throw `Missing '${key}' in query parameters`;
-                }/* else {
-                    if(typeof request.query[key] !== typeof schemaQuery[key]){
-                        HttpServer.sendResponse(response, 400, {
-                            error: `The parameter '${key}' in query type is incorrect`
-                        });
-                        throw `The parameter '${key}' in query type is incorrect`;
-                    }
-                }*/
+                }
             }
         } catch (e) {
             console.log(e);
